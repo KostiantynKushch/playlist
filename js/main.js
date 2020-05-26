@@ -51,12 +51,12 @@
 		// copy template for adding content
 		newTrack = document.importNode(trackTemplate, true);
 
-		// write content from/to variables
+		// write content from variables to template
 		newTrack.querySelector('.ba-track__duration').textContent = `${track.duration}`;
 		newTrack.querySelector('.ba-track__artist').textContent = `${track.author}`;
 		newTrack.querySelector('.ba-track__title').textContent = `${track.song}`;
 
-		// incert redy content
+		// insert redy content
 		document.querySelector('.ba-playlist__list').appendChild(newTrack);
 	});
 
