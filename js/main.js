@@ -1,8 +1,15 @@
 ; (function () {
 	"use strict";
-	const trackTemplate = document.querySelector('.ba-track-template').content;
+	const trackTemplate = document.querySelector('.ba-track-template');
+	const trackTemplateInner = trackTemplate.content;
+	const trackList = document.querySelector('.ba-playlist__list');
+
+	// remove template from DOM 
+	trackList.removeChild(trackTemplate);
+
 	// variable for copy of the template
 	let newTrack;
+
 
 	const playList = [{
 		author: "led zeppelin",
@@ -47,9 +54,9 @@
 	];
 
 
-	playList.forEach(track => {
+	playList.forEach((track, index) => {
 		// copy template for adding content
-		newTrack = document.importNode(trackTemplate, true);
+		newTrack = document.importNode(trackTemplateInner, true);
 
 		// write content from variables to template
 		newTrack.querySelector('.ba-track__duration').textContent = `${track.duration}`;
@@ -57,11 +64,8 @@
 		newTrack.querySelector('.ba-track__title').textContent = `${track.song}`;
 
 		// insert redy content
-		document.querySelector('.ba-playlist__list').appendChild(newTrack);
+		trackList.appendChild(newTrack);
 	});
-
-
-
 
 })();
 
