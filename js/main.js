@@ -54,7 +54,7 @@
 	];
 
 
-	playList.forEach((track, index) => {
+	playList.forEach(track => {
 		// copy template for adding content
 		newTrack = document.importNode(trackTemplateInner, true);
 
