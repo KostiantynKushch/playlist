@@ -24,7 +24,26 @@
 								<h2 class="ba-playlist__title">Playlist</h2>
 								<!-- /.ba-playlist__title -->
 								<ul class="ba-playlist__list">
-
+									<template class="ba-track-template">
+										<li class="ba-track">
+											<div class="ba-track__main">
+												<div class="ba-track__header">
+													<p class="ba-track__duration"></p>
+													<p class="ba-track__artist"></p>
+												</div>
+												<!-- /.ba-track__header -->
+												<h4 class="ba-track__title"></h4>
+											</div>
+											<!-- /.ba-track__main -->
+											<a href="#" class="ba-track__liked">
+												<svg class="ba-icon" width="10" height="10">
+													<use xlink:href="#icon-heart"></use>
+												</svg>
+											</a>
+											<!-- /.ba-track__liked -->
+										</li>
+										<!-- /.ba-track -->
+									</template>
 								</ul>
 								<!-- /.ba-playlist__list -->
 							</div>
@@ -41,26 +60,7 @@
 		<!-- /.ba-playlist-section -->
 
 	</main>
-	<template class="ba-track-template">
-		<li class="ba-track">
-			<div class="ba-track__main">
-				<div class="ba-track__header">
-					<p class="ba-track__duration"></p>
-					<p class="ba-track__artist"></p>
-				</div>
-				<!-- /.ba-track__header -->
-				<h4 class="ba-track__title"></h4>
-			</div>
-			<!-- /.ba-track__main -->
-			<a href="#" class="ba-track__liked">
-				<svg class="ba-icon" width="10" height="10">
-					<use xlink:href="#icon-heart"></use>
-				</svg>
-			</a>
-			<!-- /.ba-track__liked -->
-		</li>
-		<!-- /.ba-track -->
-	</template>
+
 	<svg class="ba-hiden">
 		<symbol id="icon-heart" viewBox="0 0 32 32">
 			<title>heart</title>
